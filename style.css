@@ -1,0 +1,255 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+section {
+  padding: 100px;
+}
+.banner {
+  position: relative;
+  min-height: 100vh;
+  background: url(img/home-background.jpg);
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  align-items: center;
+}
+.banner h2 {
+  margin-bottom: 100px;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.btn {
+  font-size: 28px;
+  border:0.5px solid #000;
+  position: relative;
+  color: black;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+.btn:hover{
+  background: #b8eeaf;
+  transition: 0.5s;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 100px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+header.sticky{
+  background: #fff;
+  padding: 20px 100px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+header.sticky .logo {
+  color: #111;
+}
+header .logo {
+  color: black;
+  font-size: 25px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+header ul {
+  position: relative;
+  display: flex;
+}
+header ul li {
+  position: relative;
+  list-style: none;
+}
+header ul li a {
+  position: relative;
+  display: inline-block;
+  margin: 0 15px;
+  color: black;
+  text-decoration: none;
+  font-size: 19px;
+}
+header.sticky ul li a {
+  color: #111;
+}
+.heading {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+  color: black;
+}
+.heading h2 {
+  font-size: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+}
+.heading h3 {
+  font-size: 25px;
+  padding-bottom: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+.content-box-text {
+  padding-right: 100px;
+  padding-left: 50px;
+} 
+
+.content-box-text p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 20px;
+  padding-top: 20px;
+  word-spacing: 5px;
+  text-align: justify;
+} 
+.about-jpg-box {
+  min-width: 2%;
+}
+img {
+  max-width: 100%;
+}
+
+.services {
+  background: #DCDCDC;
+} 
+.services .content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.services .services-box p {
+  font-size: 20px;
+}
+.services .content .services-box {
+  width: 50%;
+  padding: 20px;
+}
+.services .content .services-box img {
+  max-width: 100%;
+}
+
+
+.benefits .content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.benefits .content .benefits-box {
+  padding: 20px 20px;
+  background: #DCDCDC;
+  max-width: 330px;
+  margin: 20px;
+  text-align: center;
+  transition: 0.5s;
+}
+.benefits .content .benefits-box:hover{
+  background: #b8eeaf;
+}
+.benefits .content .benefits-box p {
+  padding: 5px 5px 15px 5px;
+}
+
+.benefits .content .benefits-box img {
+  max-width: 80px;
+  filter: invert(1);
+}
+
+
+.contact {
+  background: url(img/background-contact.jpg);
+  background-size: cover;
+  background-position: right;
+}
+.form-box {
+  min-width: 60%;
+}
+.form-box form {
+  display: flex;
+  flex-direction: column;
+}
+.form-box form h3, 
+.contact-info h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.form-box form input, 
+.form-box form textarea {
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background: rgb(48, 48, 48);
+  resize: none;
+  color:white;
+}
+.form-box form textarea {
+  min-height: 200px;
+}
+.form-box form input::placeholder, .form-box form textarea::placeholder {
+  color: #999;
+}
+.form-box form input[type="submit"] {
+  max-width: 100px;
+  background: #b8eeaf;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.contact-info {
+  min-width: 40%;
+}
+.contact-info h3{
+  min-width: 40%;
+}
+.contact-info-box {
+  position: relative;
+}
+.contact-info-box .box {
+  position: relative;
+  padding: 20px 0;
+  display: flex;
+}
+.contact-info-box .box .icon {
+  min-width: 40px;
+  padding-top: 4px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: 24px;
+}
+.contact-info-box .box .text {
+  display: flex;
+  margin-left: 20px;
+  font-size: 16px;
+  color: #fff;
+  flex-direction: column;
+  font-weight: 300;
+}
+.contact-info-box .box .text h3 {
+  color: black;
+  margin-bottom: 0;  
+  font-size: 25px;
+}
+.contact-info-box .box .text p {
+  color: black;
+  margin-bottom: 0;  
+  font-size: 18px;
+}
+
