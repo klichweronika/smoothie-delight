@@ -4,19 +4,20 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Smoothie Delight</title>
-    <link rel="stylesheet" href="style.css" />
-    <script type="text/javascript" src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <sc type="text/javascript" src="js/main.js"></sc>
   </head>
 
   <body>
-    <header name="headerListener()">
+    <header>
       <a href="#" class="logo">smoothie delight</a>
-      <div class="toggle"></div>
+      <div class="toggle" onClick="toggleMenu();"></div>
       <ul class="menu">
-        <li><a href="#about">About us</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#benefits">Benefits</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" onClick="toggleMenu();">About us</a></li>
+        <li><a href="#services" onClick="toggleMenu();">Services</a></li>
+        <li><a href="#benefits" onClick="toggleMenu();">Benefits</a></li>
+        <li><a href="#contact" onClick="toggleMenu();">Contact</a></li>
       </ul>
     </header>
 
@@ -101,7 +102,6 @@
       </div>
       <div class="content">
         <div class="benefits-box">
-          <img scr="icon.jpg" />
           <h2>Loose weight</h2>
           <p>
             Viverra nam libero justo laoreet sit amet cursus sit amet. Cursus in
@@ -109,7 +109,6 @@
           </p>
         </div>
         <div class="benefits-box">
-          <img scr="icon.jpg" />
           <h2>Healthy & Delicious</h2>
           <p>
             Viverra nam libero justo laoreet sit amet cursus sit amet. Cursus in
@@ -117,7 +116,6 @@
           </p>
         </div>
         <div class="benefits-box">
-          <img scr="icon.jpg" />
           <h2>Great taste experience</h2>
           <p>
             Viverra nam libero justo laoreet sit amet cursus sit amet. Cursus in
@@ -125,7 +123,6 @@
           </p>
         </div>
         <div class="benefits-box">
-          <img scr="icon.jpg" />
           <h2>Big muscle</h2>
           <p>
             Viverra nam libero justo laoreet sit amet cursus sit amet. Cursus in
@@ -156,7 +153,7 @@
 
             <div class="box">
               <div class="icon">
-                <i class="fas fa-phone"></i>
+                <i class="fa fa-phone"></i>
               </div>
               <div class="text">
                 <h3>Phone</h3>
@@ -166,7 +163,7 @@
 
             <div class="box">
               <div class="icon">
-                <i class="fa fa-map-marker"></i>
+                <i class="fa fa-envelope"></i>
               </div>
               <div class="text">
                 <h3>email</h3>
@@ -177,7 +174,7 @@
         </div>
         <div class="form-box">
           <form>
-            <h3>Message me:</h3>
+            <h3>Message us:</h3>
             <input type="text" name="" placeholder="Full Name" />
             <input type="email" name="" placeholder="Email" />
             <textarea placeholder="Your message"></textarea>
@@ -191,6 +188,12 @@
         var header = document.querySelector("header");
         header.classList.toggle("sticky", window.scrollY > 0);
       });
+      function toggleMenu() {
+        var menuToggle = document.querySelector(".toggle");
+        var menu = document.querySelector(".menu");
+        menuToggle.classList.toggle("active");
+        menu.classList.toggle("active");
+      }
     </script>
   </body>
 </html>

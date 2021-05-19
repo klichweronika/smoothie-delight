@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +10,7 @@ section {
 .banner {
   position: relative;
   min-height: 100vh;
-  background: url(img/home-background.jpg);
+  background: url(../img/home-background.jpg);
   background-size: cover;
   background-position: right;
   display: flex;
@@ -24,7 +23,7 @@ section {
 }
 .btn {
   font-size: 28px;
-  border:0.5px solid #000;
+  border: 0.5px solid #000;
   position: relative;
   color: black;
   padding: 10px 30px;
@@ -32,7 +31,7 @@ section {
   text-decoration: none;
   letter-spacing: 2px;
 }
-.btn:hover{
+.btn:hover {
   background: #b8eeaf;
   transition: 0.5s;
 }
@@ -48,10 +47,10 @@ header {
   align-items: center;
   transition: 0.5s;
 }
-header.sticky{
+header.sticky {
   background: #fff;
   padding: 20px 100px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 header.sticky .logo {
   color: #111;
@@ -107,25 +106,23 @@ header.sticky ul li a {
 .content-box-text {
   padding-right: 100px;
   padding-left: 50px;
-} 
+}
 
 .content-box-text p {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 20px;
   padding-top: 20px;
   word-spacing: 5px;
   text-align: justify;
-} 
-.about-jpg-box {
-  min-width: 2%;
 }
 img {
   max-width: 100%;
+  max-height: 100%;
 }
 
 .services {
-  background: #DCDCDC;
-} 
+  background: #dcdcdc;
+}
 .services .content {
   display: flex;
   justify-content: space-between;
@@ -142,7 +139,6 @@ img {
   max-width: 100%;
 }
 
-
 .benefits .content {
   display: flex;
   justify-content: center;
@@ -151,13 +147,13 @@ img {
 }
 .benefits .content .benefits-box {
   padding: 20px 20px;
-  background: #DCDCDC;
+  background: #dcdcdc;
   max-width: 330px;
   margin: 20px;
   text-align: center;
   transition: 0.5s;
 }
-.benefits .content .benefits-box:hover{
+.benefits .content .benefits-box:hover {
   background: #b8eeaf;
 }
 .benefits .content .benefits-box p {
@@ -169,9 +165,8 @@ img {
   filter: invert(1);
 }
 
-
 .contact {
-  background: url(img/background-contact.jpg);
+  background: url(../img/background-contact.jpg);
   background-size: cover;
   background-position: right;
 }
@@ -182,12 +177,12 @@ img {
   display: flex;
   flex-direction: column;
 }
-.form-box form h3, 
+.form-box form h3,
 .contact-info h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
-.form-box form input, 
+.form-box form input,
 .form-box form textarea {
   margin-bottom: 20px;
   padding: 15px;
@@ -196,12 +191,13 @@ img {
   outline: none;
   background: rgb(48, 48, 48);
   resize: none;
-  color:white;
+  color: white;
 }
 .form-box form textarea {
   min-height: 200px;
 }
-.form-box form input::placeholder, .form-box form textarea::placeholder {
+.form-box form input::placeholder,
+.form-box form textarea::placeholder {
   color: #999;
 }
 .form-box form input[type="submit"] {
@@ -210,11 +206,13 @@ img {
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 2px;
+  color: black;
+  border: 1px solid black;
 }
 .contact-info {
   min-width: 40%;
 }
-.contact-info h3{
+.contact-info h3 {
   min-width: 40%;
 }
 .contact-info-box {
@@ -227,13 +225,14 @@ img {
 }
 .contact-info-box .box .icon {
   min-width: 40px;
-  padding-top: 4px;
-  color: #fff;
+  padding-top: 9px;
+  color: #b8eeaf;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  font-size: 24px;
+  font-size: 30px;
 }
+
 .contact-info-box .box .text {
   display: flex;
   margin-left: 20px;
@@ -244,12 +243,111 @@ img {
 }
 .contact-info-box .box .text h3 {
   color: black;
-  margin-bottom: 0;  
+  margin-bottom: 0;
   font-size: 25px;
 }
 .contact-info-box .box .text p {
   color: black;
-  margin-bottom: 0;  
+  margin-bottom: 0;
   font-size: 18px;
 }
 
+@media (max-width: 991px) {
+  header,
+  header.sticky {
+    padding: 40px 100px;
+    z-index: 1000;
+  }
+  .menu {
+    position: fixed;
+    top: 75px;
+    left: -100%;
+    display: block;
+    padding: 100px 50px;
+    text-align: center;
+    width: 100%;
+    background: #fff;
+    height: 100vh;
+    transition: 0.5s;
+    z-index: 999;
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  .menu.active {
+    left: 0;
+  }
+  header ul li a {
+    color: #111;
+    font-size: 24px;
+    margin: 10px;
+  }
+  .toggle {
+    width: 40px;
+    height: 40px;
+    background: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    border: 1px solid silver;
+  }
+  .toggle .active {
+    background: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 20px;
+    cursor: pointer;
+  }
+  header .sticky .toggle {
+    filter: invert(1);
+  }
+  section {
+    padding: 100px;
+  }
+  .banner {
+    padding: 150px 50px 100px;
+  }
+  .banner h2 {
+    font-size: 1.5em;
+  }
+  .banner h3 {
+    font-size: 1em;
+  }
+  .btn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .heading h2 {
+    font-size: 24px;
+  }
+  .content-box h3 {
+    font-size: 20px;
+  }
+  .content {
+    flex-direction: column;
+  }
+  .services .content .services-box {
+    width: 100%;
+    padding: 10px;
+    text-align: justify;
+  }
+  .benefits .content .benefits-box {
+    width: 100%;
+    padding: 10px;
+    text-align: justify;
+  }
+  .contact-info {
+    margin: 20px 0;
+  }
+  .content-box-text {
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+  .content-box-text p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+    padding-top: 20px;
+    word-spacing: 5px;
+  }
+}
