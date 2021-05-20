@@ -255,13 +255,13 @@ img {
 @media (max-width: 991px) {
   header,
   header.sticky {
-    padding: 40px 100px;
+    padding: 10px;
     z-index: 1000;
   }
   .menu {
     position: fixed;
     top: 75px;
-    left: -100%;
+    right: -100%;
     display: block;
     padding: 100px 50px;
     text-align: center;
@@ -273,7 +273,7 @@ img {
     border-top: 1px solid rgba(0, 0, 0, 0.2);
   }
   .menu.active {
-    left: 0;
+    right: 0;
   }
   header ul li a {
     color: #111;
@@ -283,13 +283,12 @@ img {
   .toggle {
     width: 40px;
     height: 40px;
-    background: white;
+    background: url(../img/burger-icon.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 30px;
     cursor: pointer;
     border-radius: 20px;
-    border: 1px solid silver;
   }
   .toggle .active {
     background: white;
